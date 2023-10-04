@@ -1,5 +1,7 @@
 package encapsulamento;
 
+//poo
+
 public class ControleRemoto implements Controlador {
 	
 	
