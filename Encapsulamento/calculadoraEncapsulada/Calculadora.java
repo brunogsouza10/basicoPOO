@@ -7,10 +7,6 @@ public class Calculadora implements HardwareCalculadora{
 	
 	private boolean desligado;
 	private boolean ligado = false;
-	private int somar; 
-	private int subtrair;
-	private int multiplicar;
-	private int dividir;
 	
 	
 	
@@ -85,10 +81,7 @@ public class Calculadora implements HardwareCalculadora{
 		super();
 		this.desligado = desligado;
 		this.ligado = ligado;
-		this.somar = somar;
-		this.subtrair = subtrair;
-		this.multiplicar = multiplicar;
-		this.dividir = dividir;
+		
 	}
 
 	//MÉTODOS ACESSORES (GET) E MODIFICADORES (SET)
@@ -109,38 +102,6 @@ public class Calculadora implements HardwareCalculadora{
 
 	public void setLigado(boolean ligado) {
 		this.ligado = ligado;
-	}
-
-	public int getSomar() {
-		return somar;
-	}
-
-	public void setSomar(int somar) {
-		this.somar = somar;
-	}
-
-	public int getSubtrair() {
-		return subtrair;
-	}
-
-	public void setSubtrair(int subtrair) {
-		this.subtrair = subtrair;
-	}
-
-	public int getMultiplicar() {
-		return multiplicar;
-	}
-
-	public void setMultiplicar(int multiplicar) {
-		this.multiplicar = multiplicar;
-	}
-
-	public int getDividir() {
-		return dividir;
-	}
-
-	public void setDividir(int dividir) {
-		this.dividir = dividir;
 	}
 
 	
@@ -168,7 +129,7 @@ public class Calculadora implements HardwareCalculadora{
 			
 			this.ligado = true;
 			
-			System.out.println("Calculadora ligada: " + this.ligado);
+			System.out.println("Calculadora ligada: " + this.isLigado());
 			System.out.println("----------------------------------");
 			System.out.println("A calculadora está ligada!");
 			
@@ -179,7 +140,7 @@ public class Calculadora implements HardwareCalculadora{
 				
 			this.ligado = false;	
 				
-			System.out.println("Calculadora ligada: " + this.ligado);
+			System.out.println("Calculadora ligada: " + this.isLigado());
 			System.out.println("----------------------------------");
 			System.out.println("A calculadora está desligada!");
 			System.exit(0);
@@ -201,21 +162,21 @@ public class Calculadora implements HardwareCalculadora{
 		System.out.println("\nDeseja desligar a calculadora: ");
 		respostaDesligar = scanner.next().charAt(0);
 		
-		if (this.desligado == false && respostaDesligar == 's' || respostaDesligar == 'S') {
+		if (this.isDesligado() == false && respostaDesligar == 's' || respostaDesligar == 'S') {
 			
 			this.desligado = false;
 			
-			System.out.println("Calculadora ligada: " + this.desligado);
+			System.out.println("Calculadora ligada: " + this.isDesligado());
 			System.out.println("-------------------------------------");
 			System.out.println("A calculadora foi desligada!");
 			
 		} else {
 			
-			if (this.desligado == false && respostaDesligar == 'n' || respostaDesligar == 'N') {
+			if (this.isDesligado() == false && respostaDesligar == 'n' || respostaDesligar == 'N') {
 				
 				this.desligado = true;
 				
-				System.out.println("Calculadora ligada: " + this.desligado);
+				System.out.println("Calculadora ligada: " + this.isDesligado());
 				System.out.println("-------------------------------------");
 				System.out.println("A calculadora continua ligada!");
 				
