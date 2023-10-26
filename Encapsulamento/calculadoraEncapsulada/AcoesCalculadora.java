@@ -9,6 +9,7 @@ public class AcoesCalculadora {
 		
 		teclas.ligar();
 		teclas.calcular();
+		teclas.desligar();
 		
 		
         
