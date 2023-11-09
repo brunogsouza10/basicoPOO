@@ -3,7 +3,7 @@ package polimorfismos;
 import java.util.Random;
 import java.util.Scanner;
 
-public final class Palmeiras extends Spfc {
+public final class Palmeiras extends TimeDeFutebol {
 //FILHAS, FOLHAS
 
 	@Override

@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.random.*;
 import java.util.Scanner;
 
-public final class Corinthians extends Spfc {
+public final class Corinthians extends TimeDeFutebol {
 
 	// FILHAS, FOLHAS
 	@Override

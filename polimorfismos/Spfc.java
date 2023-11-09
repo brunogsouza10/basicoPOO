@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 //SPFC, PAI DE TODOS
-public class Spfc extends TimeDeFutebol {
+public final class Spfc extends TimeDeFutebol {
 
 	@Override
 	public void marcarPartida() {
